@@ -1,0 +1,7 @@
+﻿<Application
+    x:Class="FoodS2Calories.UWP.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:FoodS2Calories.UWP">
+
+</Application>

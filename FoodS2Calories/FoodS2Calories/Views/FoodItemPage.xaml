@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:resources="clr-namespace:FoodS2Calories.Resx"
+             x:Class="FoodS2Calories.TodoItemPage" Title="{Binding Name}">
+    
+    <StackLayout Margin="20" VerticalOptions="StartAndExpand">
+        <Label Text="{x:Static resources:AppResources.name}" FontSize="Large"/>
+        <Entry Text="{Binding Name}" FontSize="Large"/>
+        
+        <Label Text="{x:Static resources:AppResources.protein}" FontSize="Large"/>
+        <Entry Text="{Binding Notes}"  Keyboard="Numeric" FontSize="Large"/>
+        
+        <Label Text="{x:Static resources:AppResources.lipid}" FontSize="Large" />
+        <Entry Text="{Binding Lipids}"  Keyboard="Numeric" FontSize="Large"/>
+        
+        <Label Text="{x:Static resources:AppResources.glicid}" FontSize="Large"/>
+        <Entry Text="{Binding Glicids}"  Keyboard="Numeric" FontSize="Large"/>
+        
+        
+        
+        <Button Text="{x:Static resources:AppResources.save}" Clicked="OnSaveClicked"
+                Margin="0,20,0,0"
+                TextColor="White"
+                FontSize="Large"
+                FontAttributes="Bold"
+                WidthRequest="250"
+                CornerRadius="10"
+                BorderColor="DarkGreen"
+                BorderWidth="2"
+                BackgroundColor="Green"/>
+        <Button Text="{x:Static resources:AppResources.delete}" Clicked="OnDeleteClicked"
+                TextColor="White"
+                FontSize="Large"
+                FontAttributes="Bold"
+                WidthRequest="250"
+                CornerRadius="10"
+                BorderColor="DarkGreen"
+                BorderWidth="2"
+                BackgroundColor="Green"/>
+                
+                
+        <Button Text="{x:Static resources:AppResources.cancel}" Clicked="OnCancelClicked"
+                TextColor="White"
+                FontSize="Large"
+                WidthRequest="250"
+                FontAttributes="Bold"
+                CornerRadius="10"
+                BorderColor="DarkGreen"
+                BorderWidth="2"
+                BackgroundColor="Green"/>
+    </StackLayout>
+    
+</ContentPage>

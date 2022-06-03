@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:resources="clr-namespace:FoodS2Calories.Resx"
+             x:Class="FoodS2Calories.ConvertMeal">
+    
+    <NavigationPage.TitleView>
+        <Label Text="{x:Static resources:AppResources.mealinsert}" Padding="85, 0, 0, 0"  FontSize="Large" FontAttributes="Bold" TextColor="White" HorizontalTextAlignment="Start"/>
+    </NavigationPage.TitleView>
+
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="listView" Margin="30" ItemSelected="OnListItemSelected" SeparatorColor="DarkGreen">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Margin="20,0,0,0" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                                <Label Text="{Binding Name}" FontSize="Large" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" />
+                                <Image x:Name="checkIcon"  Source="check.ico" HorizontalOptions="End" IsVisible="{Binding Done}" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button Text = "{x:Static resources:AppResources.convert}"
+                Margin="0,0,0,20"
+                TextColor="White"
+                FontSize="Large"
+                FontAttributes="Bold"
+                WidthRequest="250"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="Center"
+                Clicked="Button_Clicked_5"
+                CornerRadius="10"
+                BorderColor="DarkGreen"
+                BorderWidth="2"
+                BackgroundColor="Green"/>
+        </StackLayout>
+    </ContentPage.Content>
+
+
+</ContentPage>

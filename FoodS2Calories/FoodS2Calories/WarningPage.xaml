@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:resources="clr-namespace:FoodS2Calories.Resx"
+             x:Class="FoodS2Calories.WarningPage">
+    
+    
+    <ContentPage.Content>
+        <StackLayout Margin="50">
+            <Label Text="{x:Static resources:AppResources.warning}"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" FontSize="30" TextColor="Red" FontAttributes="Bold"/>
+
+            <Label Text="{x:Static resources:AppResources.mesage1}"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" Margin="25" />
+
+            <Label Text="{x:Static resources:AppResources.mesage2}"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+
+            <Button Text= "{x:Static resources:AppResources.yes}"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="Center"
+                Clicked="Button_Clicked" />
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

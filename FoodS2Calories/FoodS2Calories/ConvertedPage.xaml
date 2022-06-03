@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+    <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                 xmlns:resources="clr-namespace:FoodS2Calories.Resx"
+                 x:Class="FoodS2Calories.ConvertedPage">
+
+    <NavigationPage.TitleView>
+        <Label Text="Result" Padding="90, 0, 0, 0"  FontSize="Large" FontAttributes="Bold" TextColor="White" HorizontalTextAlignment="Start"/>
+    </NavigationPage.TitleView>
+
+    <StackLayout>
+
+        <ListView x:Name="listView" Margin="20" SelectionMode="None">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Margin="20,0,0,0" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                            <Label Text="{Binding Name}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" />
+                            <Label Text="{Binding Total}" VerticalTextAlignment="Center" HorizontalOptions="End" />
+                            <Label Text="cal" VerticalTextAlignment="Center" HorizontalOptions="End" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <StackLayout Padding="15"  BackgroundColor="Green">
+            <Label Text="Total"  HorizontalOptions="Center" FontSize="Large" FontAttributes="Bold" TextColor="White"/>
+            <Label Text="{Binding Totalx}" x:Name="totalx" HorizontalOptions="Center" FontSize="Large" TextColor="White"/>
+            <Label Text=""  x:Name="easterEgg" HorizontalOptions="Center" FontSize="12" TextColor="Red"/>
+        </StackLayout>
+       
+
+
+    </StackLayout>
+</ContentPage>
