@@ -1,3 +1,3 @@
 # GPS2021.FoodS2Calorie
 
-This is a Curricular Unit project that I worked with others
+This was a group project to complement all the work done before, for Software Project Management curricular unit.
